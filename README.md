@@ -1,12 +1,12 @@
-# Mindbox Тестовое задание
+# Todo App
 
-Тестовое задание на позицию junior frontend в компанию Mindbox
-https://docs.google.com/document/d/15QkApDkQqtzLSVW7Fpyluwj-BvUIHFXBjvvFCe77Aaw/edit
+Simple Todo App for your task. You can add new todo, set one as completed, filter active/completed, clear all completed.
+Covered with tests
 
 ## Использованный стек
 
-- React (hooks, TypeScript)
-- Zod, react-hook-from
+- React (hooks), TypeScript
+- Zod, react-hook-form
 - shadcn/ui, tailwind
 - redux-toolkit
-- vitest, testing-library
+- Vite, Vitest, testing-library, jest
