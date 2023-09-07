@@ -53,7 +53,7 @@ const FilterItem = ({ filterItem }: Props) => {
     <li>
       <button
         data-testid={`filter-${name}`}
-        className={cn("px-2 py-1 border border-transparent", active && "border-orange-500")}
+        className={cn("px-2 py-1 border-2 border-transparent", active && "border-red-300")}
         onClick={() => onClick(filter)}
       >
         {name}

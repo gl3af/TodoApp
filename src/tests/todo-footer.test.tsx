@@ -19,7 +19,8 @@ describe('Todo Footer', () => {
     const leftAmount = todos.filter(todo => !todo.completed).length;
 
     const text = screen.getByTestId("left-amount");
-    expect(text.textContent![0]).toBe(`${leftAmount}`);
+    const amount = parseInt(text.textContent!.split(" ")[0]);
+    expect(amount).toBe(leftAmount);
   });
 
   // Filters test
@@ -51,10 +52,9 @@ describe('Todo Footer', () => {
     const leftAmount = initialTodos.filter(todo => !todo.completed).length;
 
     const element = screen.getByTestId("clear-completed");
-
     fireEvent.click(element);
-    const endTodos = store.getState().todos.todos;
 
+    const endTodos = store.getState().todos.todos;
     expect(endTodos.length).toBe(leftAmount);
   });
 

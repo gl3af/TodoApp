@@ -11,7 +11,7 @@ export const useTodos = () => {
   const {getMany} = useLocalStorage<Todo>('todos');
 
   useEffect(() => {
-    const localStorageCart = getMany();
-    dispatch(setTodos(localStorageCart));
+    const localStorageTodos = getMany();
+    dispatch(setTodos(localStorageTodos));
   }, [dispatch, getMany]);
 }
